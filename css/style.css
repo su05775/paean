@@ -1,0 +1,354 @@
+/* html, body { height: 100%; }
+body {
+  background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+  overflow: hidden;
+}
+
+.ocean { 
+  height: 5%;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: #015871;
+}
+
+.wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+} */
+
+
+/* Header */
+/* .large-header {
+	position: relative;
+	width: 100%;
+
+	background: #333;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	z-index: 1;
+}
+
+#large-header {
+	background-image: url('https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg');
+}
+
+.main-title {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	color: #f9f1e9;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+}
+
+.demo-1 .main-title {
+	text-transform: uppercase;
+	font-size: 4.2em;
+	letter-spacing: 0.1em;
+}
+
+.main-title .thin {
+	font-weight: 200;
+}
+
+@media only screen and (max-width : 768px) {
+	.demo-1 .main-title {
+		font-size: 3em;
+	}
+} */
+
+
+/* .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+    overflow: hidden;
+}
+.bg-video_content {
+    width: 100% !important;
+} */
+
+
+/* html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#particle-canvas {
+  width: 100%;
+  height: 100%;
+} */
+
+h1 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } 
+h3 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } 
+p { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } 
+blockquote { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } 
+pre { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+b { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
+input { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    /* Base font size */
+    font-size: 10px;
+
+    /* Full grid area variable */
+    --fullGrid: 1 / 1 / -1 / -1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    /* Create grid spanning viewport width & height */
+    display: grid;
+    grid-template-rows: 100vh;
+    overflow: hidden;
+    box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.5);
+}
+
+.video-bg {
+    /* Span the full grid */
+    grid-area: var(--fullGrid);
+
+    /* Re-size video to cover full screen while maintaining aspect ratio */
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+
+    /* Display video below overlay */
+    z-index: -1;
+}
+
+.video-bg::-webkit-media-controls {
+    display: none !important;
+}
+
+.video-overlay {
+    /* Span the full grid */
+    grid-area: var(--fullGrid);
+
+    /* Center Content */
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+
+    /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: calc(1.8em + 2.5vw);
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 120px;
+}
+
+.title {
+    color: #fff;
+    font: bold;
+    font-size: 25px;
+    margin: 25px 0 20px 0;
+}
+
+label {
+    text-align: left;
+}
+
+#feedback-page{
+	text-align:left;
+}
+
+#form-div {
+	background-color:rgba(255, 255, 255, 0.154);
+	padding-left:35px;
+	padding-right:35px;
+	padding-top:35px;
+	padding-bottom:15px;
+	width: 450px;
+	float: left;
+	left: 50%;
+    top: 10%;
+	position: absolute;
+	margin-left: -260px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  font-family: 'Pretendard-Regular';
+}
+
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+    color: #fff !important;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Pretendard-Regular';
+  }
+
+  .signin {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    border-radius: 3px;
+    background-color: #b18828;
+    box-sizing: border-box;
+    color: #fff !important;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Pretendard-Regular';
+    letter-spacing: 1px;
+  }
+  .signin:hover {
+    background-color: #97731e;
+  }
+
+  .signup {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    color: #fff !important;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Pretendard-Regular';
+    letter-spacing: 1px;
+  }
+  .signup:hover {
+    background-color: #fff;
+    border: none;
+    color: #26150D !important;
+  }
+
+  .find {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    color: #fff !important;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Pretendard-Regular';
+    letter-spacing: 1px;
+  }
+  .find:hover {
+    background-color: #fff;
+    border: none;
+    color: #26150D !important;
+  }
+
+  .lan_btn {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    color: #fff !important;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Pretendard-Regular';
+    letter-spacing: 1px;
+    line-height: 20px;
+  }
+  .lan_btn:hover {
+    background-color: #fff;
+    border: none;
+    color: #26150D !important;
+  }
+  .lanpng {
+    margin: 5px 0 0 0;
+  }
+
+  .copy {
+    font-size: 13px;
+    font-family: 'Pretendard-Regular';
+    /* color: #efefef; */
+  }
+@media only screen and (max-width: 580px) {
+	#form-div{
+		left: 3%;
+		margin-right: 3%;
+		width: 88%;
+		margin-left: 0;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+}
+
