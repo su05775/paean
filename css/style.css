@@ -257,7 +257,7 @@ input[type=text], input[type=password], input[type=email] {
     display: inline-block;
     border: none;
     border-radius: 3px;
-    background-color: #45A6D5;
+    background-color: #0972a7;
     box-sizing: border-box;
     color: #fff !important;
     font-size: 15px;
@@ -266,7 +266,7 @@ input[type=text], input[type=password], input[type=email] {
     letter-spacing: 1px;
   }
   .signin:hover {
-    background-color: #004CA3;
+    background-color: #0972a7;
   }
 
   .signup {
